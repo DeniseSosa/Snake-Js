@@ -1,7 +1,7 @@
 // elements
 const board= document.getElementById('board')
 const scoreBoard= document.getElementById('scoreBoard')
-const start = document.getElementById('startButton')
+const startButton = document.getElementById('startButton')
 const gameOver = document.getElementById('gameOver')
 // Game Settings
 const boardSize= 10;
@@ -26,4 +26,33 @@ let emptySquares
 let moveInterval
 
 
+function createBoard () {
+    boardSquares.forEach((row, rowIndex) => {
+        row.forEach((col,colIndex) => {
+           const squareValue = `${rowIndex}${colIndex}` 
+           const squareElement= document.createElement('div')
+           squareElement.setAttribute('class', 'square emptySquare')
+           squareElement.setAttribute('id', squareValue)
+           board.appendChild(squareElement)
+           emptySquares.push(squareValue)
+        });
+    })
+}
+
+const setGame = () => {
+    snake=['00','01','02','03']
+    score= snake.length
+    direction= 'ArrowRight'
+    boardSquares= Array.from(Array(boardSize), () => new Array(boardSize).fill(squareTypes.emptySquare))
+    console.log(boardSquares);
+    board.innerHTML= ""
+    emptySquares= []
+    createBoard()
+}
+
+const startGame = () => {
+    setGame()
+}
+
+startButton.addEventListener('click',startGame)
 
