@@ -25,6 +25,24 @@ let boardSquares
 let emptySquares
 let moveInterval
 
+// Para crear un square y rellenar cada cuadrado del tablero
+// params // 
+//square: poosicion del cuadrado
+//type: tipo de cuadrado (si es emptySquare, foodSquare o snakeSquare)
+
+function drawSquare (square, type) {
+    const [row, col] = square.split('')
+    boardSquares[row][col]= squareTypes[type]
+    const squareElement= document.getElementById(square)
+    squareElement.setAttribute('class',`square${type}`)
+    if(type === 'emptySquare'){
+        emptySquares.push(square)
+    } else {
+        if(emptySquares.indexOf(square) !== -1){
+            emptySquares.splice(emptySquares.indexOf(square), 1)
+        }
+    }
+}
 
 function createBoard () {
     boardSquares.forEach((row, rowIndex) => {
