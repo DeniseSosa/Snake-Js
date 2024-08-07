@@ -25,6 +25,13 @@ let boardSquares
 let emptySquares
 let moveInterval
 
+
+
+
+function drawSnake () {
+    snake.forEach(square => drawSquare(square,'snakeSquare'))
+}
+
 // Para crear un square y rellenar cada cuadrado del tablero
 // params // 
 //square: poosicion del cuadrado
@@ -70,6 +77,8 @@ const setGame = () => {
 
 const startGame = () => {
     setGame()
+    startButton.disabled= true
+    drawSnake()
 }
 
 startButton.addEventListener('click',startGame)
