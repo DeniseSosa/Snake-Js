@@ -41,7 +41,7 @@ function drawSquare (square, type) {
     const [row, col] = square.split('')
     boardSquares[row][col]= squareTypes[type]
     const squareElement= document.getElementById(square)
-    squareElement.setAttribute('class',`square${type}`)
+    squareElement.setAttribute('class',`square ${type}`)
     if(type === 'emptySquare'){
         emptySquares.push(square)
     } else {
@@ -49,6 +49,10 @@ function drawSquare (square, type) {
             emptySquares.splice(emptySquares.indexOf(square), 1)
         }
     }
+}
+
+function updateScore () {
+    scoreBoard.innerText = score
 }
 
 function createBoard () {
@@ -79,6 +83,8 @@ const startGame = () => {
     setGame()
     startButton.disabled= true
     drawSnake()
+    updateScore()
+    createRandomFood()
 }
 
 startButton.addEventListener('click',startGame)
