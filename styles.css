@@ -4,9 +4,12 @@
     font-family: 'Share Teach Mono', monospace ;
 }
 #board .boardInfo{
+    width: 700px;
     max-width: 540px;
 }
 #board{
+    width: 600px;
+    height: 600px;
     display: grid;
     grid-template-columns: repeat(10,1fr);
     background-color: yellowgreen;
@@ -19,16 +22,18 @@
 }
 .boardInfo{
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    background-color: antiquewhite;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 #startButton{
     color: whitesmoke;
     background-color: red;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10%;
     border: none;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 #scoreBoard{
     display: inline-flex;
@@ -39,11 +44,11 @@
     aspect-ratio: 1;
 }
 .emptySquare{
-background-color: aquamarine;
+background-color: rgb(21, 43, 35);
 }
 .snakeSquare{
 background-color: blueviolet;
 }
 .foodSquare{
-background-color: rgb(60, 194, 60);
+background-color: rgb(227, 48, 188);
 }
