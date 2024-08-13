@@ -2,23 +2,64 @@
 
 * {
     font-family: 'Share Teach Mono', monospace ;
+    background: rgba(245, 245, 245, 0.135);
+    margin: 0;
 }
-#board .boardInfo{
-    width: 700px;
-    max-width: 540px;
+
+.boardInfo {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+@media (width >= 992px) {
+    #board {
+        width: 600px;
+        height: 600px;
+    }
+
+}
+
+@media (width >= 576px < 992px) {
+    #board {
+        width: 540px;
+        height: 540px;
+    }
+}
+
+@media (width < 576px) {
+    #board {
+        width: 340px;
+        height: 340px;
+    }
 }
 #board{
-    width: 600px;
-    height: 600px;
+
     display: grid;
     grid-template-columns: repeat(10,1fr);
-    background-color: yellowgreen;
+    background-color:  rgb(19, 5, 26);
+    border-radius: 10px;
+    margin: 0 auto;
+    
 }
 #startButton .boardInfo{
     font-size: 25px;
 }
 #gameOver{
     display: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    background-color: red;
+    padding: 20px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    
+
 }
 .boardInfo{
     display: flex;
@@ -27,9 +68,9 @@
 }
 #startButton{
     color: whitesmoke;
-    background-color: red;
+    background-color: green;
     font-weight: bold;
-    font-size: large;
+    font-size: x-large;
     border-radius: 10%;
     border: none;
     margin: 10px;
@@ -37,18 +78,28 @@
 }
 #scoreBoard{
     display: inline-flex;
-    background-color: aqua;
-
+    font-size: larger;
+    font-weight: bold;
+    
 }
+
 .square{
     aspect-ratio: 1;
+    
 }
 .emptySquare{
-background-color: rgb(21, 43, 35);
+background-color: rgb(19, 5, 26);
+border-radius: 10px;
 }
 .snakeSquare{
 background-color: blueviolet;
+border-radius: 40%;
 }
 .foodSquare{
 background-color: rgb(227, 48, 188);
+}
+h1{
+    text-align: center;
+    color: rgb(240, 73, 240);
+    font-size:50px;
 }
