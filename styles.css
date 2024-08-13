@@ -9,7 +9,7 @@
 .boardInfo {
     display: flex;
     align-items: center;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
 }
 
@@ -21,7 +21,7 @@
 
 }
 
-@media (width >= 576px < 992px) {
+@media (  576px <= width < 992px) {
     #board {
         width: 540px;
         height: 540px;
