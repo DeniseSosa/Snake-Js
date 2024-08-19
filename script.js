@@ -125,6 +125,21 @@ function directionEvent(key) {
         setDirection(key.code);
     }
 }
+/// Para mobile
+document.getElementById("Arrow-Up").addEventListener('click', ()=>{
+    if (direction !== 'ArrowDown') setDirection('ArrowUp');
+})
+document.getElementById("Arrow-Down").addEventListener('click', ()=>{
+    if (direction !== 'ArrowUp') setDirection('ArrowDown');
+})
+document.getElementById("Arrow-Left").addEventListener('click', ()=>{
+    if (direction !== 'ArrowRight') setDirection('ArrowLeft');
+})
+document.getElementById("Arrow-Right").addEventListener('click', ()=>{
+    if (direction !== 'ArrowLeft') setDirection('ArrowUp');
+})
+
+
 
 function createRandomFood() {
     const randomEmptySquare = emptySquares[Math.floor(Math.random() * emptySquares.length)];

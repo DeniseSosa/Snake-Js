@@ -13,27 +13,6 @@
     font-weight: bold;
 }
 
-@media (width >= 992px) {
-    #board {
-        width: 600px;
-        height: 600px;
-    }
-
-}
-
-@media (  576px <= width < 992px) {
-    #board {
-        width: 540px;
-        height: 540px;
-    }
-}
-
-@media (width < 576px) {
-    #board {
-        width: 340px;
-        height: 340px;
-    }
-}
 #board{
 
     display: grid;
@@ -104,4 +83,75 @@ h1{
     color: rgb(240, 73, 240);
     font-size:50px;
     text-shadow: 1px 1px 2px black;
+}
+
+.arrow-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+.Arrow-Up{
+    grid-column: 2 / 3;
+    justify-self: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    background-image: url("/img/ArrowUp.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Arrow-Left{
+    grid-row: 2 / 3;
+    justify-self:end;
+    height: 50px;
+    width: 50px;
+    background-image: url("/img/ArrowLeft.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Arrow-Down{
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+    justify-self: center;
+    height: 50px;
+    width: 50px;
+    background-image: url("/img/ArrowDown.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Arrow-Right{
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+    height: 50px;
+    width: 50px;
+    background-image: url("/img/ArrowRight.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (width < 576px) {
+    #board {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media (  576px <= width < 992px) {
+    #board {
+        width: 540px;
+        height: 540px;
+    }
+}
+
+@media (width >= 992px) {
+    #board {
+        width: 600px;
+        height: 600px;
+    }
+    .arrow-container{
+        display: none;
+    }
+    
 }
