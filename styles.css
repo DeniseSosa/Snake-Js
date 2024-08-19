@@ -89,7 +89,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
 }
 .Arrow-Up{
     grid-column: 2 / 3;
@@ -97,16 +97,17 @@ h1{
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    background-image: url("/img/ArrowUp.svg");
+    background-image: url("/public/ArrowUp.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 .Arrow-Left{
+    
     grid-row: 2 / 3;
     justify-self:end;
     height: 50px;
     width: 50px;
-    background-image: url("/img/ArrowLeft.svg");
+    background-image: url("/public/ArrowLeft.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -116,17 +117,17 @@ h1{
     justify-self: center;
     height: 50px;
     width: 50px;
-    background-image: url("/img/ArrowDown.svg");
+    background-image: url("/public/ArrowDown.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 .Arrow-Right{
-    grid-column: 3 / 3;
+    grid-column: 3/ 3;
     grid-row: 2 / 3;
     justify-self: start;
     height: 50px;
     width: 50px;
-    background-image: url("/img/ArrowRight.svg");
+    background-image: url("/public/ArrowRight.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
