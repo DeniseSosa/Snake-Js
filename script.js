@@ -140,7 +140,6 @@ document.getElementById("Arrow-Right").addEventListener('click', ()=>{
 })
 
 
-
 function createRandomFood() {
     const randomEmptySquare = emptySquares[Math.floor(Math.random() * emptySquares.length)];
     drawSquare(randomEmptySquare, 'foodSquare');
