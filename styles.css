@@ -97,7 +97,7 @@ h1{
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    background-image: url('/ArrowUp.svg');
+    background-image: url(ArrowUp.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -107,7 +107,7 @@ h1{
     justify-self:end;
     height: 50px;
     width: 50px;
-    background-image: url("./ArrowLeft.svg");
+    background-image: url(ArrowLeft.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -117,7 +117,7 @@ h1{
     justify-self: center;
     height: 50px;
     width: 50px;
-    background-image: url("./ArrowDown.svg");
+    background-image: url(ArrowDown.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -127,7 +127,7 @@ h1{
     justify-self: start;
     height: 50px;
     width: 50px;
-    background-image: url("./ArrowRight.svg");
+    background-image: url(ArrowRight.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
