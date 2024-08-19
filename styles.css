@@ -97,7 +97,7 @@ h1{
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    background-image: url('ArrowUp.svg');
+    background-image: url('/ArrowUp.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
