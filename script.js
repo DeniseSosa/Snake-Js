@@ -136,7 +136,7 @@ document.getElementById("Arrow-Left").addEventListener('click', ()=>{
     if (direction !== 'ArrowRight') setDirection('ArrowLeft');
 })
 document.getElementById("Arrow-Right").addEventListener('click', ()=>{
-    if (direction !== 'ArrowLeft') setDirection('ArrowUp');
+    if (direction !== 'ArrowLeft') setDirection('ArrowRight');
 })
 
 
